@@ -20,7 +20,7 @@ jobs:
     - name: yarn install and dist
       run: |
         yarn
-        yarn run dist
+        yarn run publish
       env:
         CI: true
         GH_TOKEN: ${{ secrets.GH_TOKEN }}
@@ -42,7 +42,7 @@ jobs:
     - name: yarn install and dist
       run: |
         yarn
-        yarn run dist
+        yarn run publish
       env:
         CI: true
         GH_TOKEN: ${{ secrets.GH_TOKEN }}
@@ -64,7 +64,7 @@ jobs:
     - name: yarn install and dist
       run: |
         yarn
-        yarn run dist
+        yarn run publish
       env:
         CI: true
         GH_TOKEN: ${{ secrets.GH_TOKEN }}
