@@ -24,11 +24,6 @@ jobs:
       env:
         CI: true
         GH_TOKEN: ${{ secrets.GH_TOKEN }}
-    - name: Upload Artifacts
-      uses: actions/upload-artifact@v1.0.0
-      with:
-        name: ubuntu-build
-        path: electron-output/
   
   macos:
 
@@ -51,11 +46,6 @@ jobs:
       env:
         CI: true
         GH_TOKEN: ${{ secrets.GH_TOKEN }}
-    - name: Upload artifacts
-      uses: actions/upload-artifact@v1.0.0
-      with:
-        name: mac-build
-        path: electron-output/
 
   windows:
 
@@ -78,8 +68,3 @@ jobs:
       env:
         CI: true
         GH_TOKEN: ${{ secrets.GH_TOKEN }}
-    - name: Upload artifacts
-      uses: actions/upload-artifact@v1.0.0
-      with:
-        name: windows-build
-        path: electron-output/
