@@ -3,7 +3,7 @@ name: Node CI
 on: [push]
 
 jobs:
-  build:
+  linux:
 
     runs-on: ubuntu-latest
 
@@ -29,13 +29,13 @@ jobs:
         name: ubuntu-build
         path: electron-output/
   
-  macbuild:
+  macos:
 
     runs-on: macOS-latest
 
     strategy:
       matrix:
-        node-version: [8.12]
+        node-version: [12.7.0]
 
     steps:
     - uses: actions/checkout@v1
@@ -55,13 +55,13 @@ jobs:
         name: mac-build
         path: electron-output/
 
-  winbuild:
+  windows:
 
     runs-on: windows-latest
 
     strategy:
       matrix:
-        node-version: [8.12]
+        node-version: [12.7.0]
 
     steps:
     - uses: actions/checkout@v1
