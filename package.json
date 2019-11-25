@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "tsc && electron main.js",
     "pack": "electron-builder --dir",
-    "dist": "electron-builder"
+    "dist": "tsc && electron-builder"
   },
   "author": {
     "name": "Roddy Pratt",
